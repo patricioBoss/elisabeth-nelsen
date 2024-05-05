@@ -1,0 +1,20 @@
+{
+  "name": "Elizabeth Regina Nelsen | Wealth Management",
+  "short_name": "Elizabeth Regina Nelsen WM",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

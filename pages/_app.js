@@ -44,7 +44,7 @@ import { DefaultSeo, LocalBusinessJsonLd } from "next-seo";
 
 // ----------------------------------------------------------------------
 //advisor.ElizabethReginaNelsen
-https: MyApp.propTypes = {
+MyApp.propTypes = {
   Component: PropTypes.func,
   pageProps: PropTypes.object,
   settings: PropTypes.object,

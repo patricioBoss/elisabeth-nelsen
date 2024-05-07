@@ -108,14 +108,15 @@ const MyStory = () => {
             {more && <br />}
             {more && (
               <span>
-                <span className=" font-semibold">Elizabeth Regina Nelsen:</span>{" "}
-                "As a seasoned business professional with expertise in business
-                development, performance management, and book management, I
-                leverage my skills to drive growth and retention at E*TRADE from
-                Morgan Stanley. With a strong educational background and recent
-                certifications (SIE, Series 7, and Series 63), I am passionate
-                about my work and eager to connect with other managers and
-                collaborators to explore new opportunities."
+                <span className=" font-semibold">Elizabeth Regina Nelsen:</span>
+                &quot;As a seasoned business professional with expertise in
+                business development, performance management, and book
+                management, I leverage my skills to drive growth and retention
+                at E*TRADE from Morgan Stanley. With a strong educational
+                background and recent certifications (SIE, Series 7, and Series
+                63), I am passionate about my work and eager to connect with
+                other managers and collaborators to explore new
+                opportunities.&quot;
               </span>
             )}
             <br />

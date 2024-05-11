@@ -185,6 +185,7 @@ export default function MyApp(props) {
         defer
         src="//js-na1.hs-scripts.com/45839955.js"
       /> */}
+      <script src="//fw-cdn.com/11614959/4264603.js" chat="true"></script>
     </>
   );
 }

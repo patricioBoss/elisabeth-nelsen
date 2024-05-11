@@ -4,7 +4,7 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // Select the database to use.
-use("ethervest");
+use("test");
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against the correct database and collection.
@@ -37,17 +37,17 @@ use("ethervest");
 // db.sales.aggregate(aggregation);
 
 // db.withdrawals.deleteMany({userId:{$nin:[ObjectId('637691971b355e91206fa200'),ObjectId('634662eabcad66dd8eb2d7d2')]}})
-db.transactions.aggregate([
-  {
-    $match: {
-      $and: [
-        { userId: ObjectId("64de971b1324761bcb580f77") },
-        { type: "investment" },
-      ],
-    },
-  },
-  { $group: { _id: "$userId", totalInvestment: { $sum: "$amount" } } },
-]);
+// db.transactions.aggregate([
+//   {
+//     $match: {
+//       $and: [
+//         { userId: ObjectId("64de971b1324761bcb580f77") },
+//         { type: "investment" },
+//       ],
+//     },
+//   },
+//   { $group: { _id: "$userId", totalInvestment: { $sum: "$amount" } } },
+// ]);
 
 // db.investments.updateMany(
 //   {},
@@ -57,3 +57,6 @@ db.transactions.aggregate([
 //     },
 //   }
 // );
+
+// db.contactsales.deleteMany({ brand: ObjectId("660d3f7a80580269b9632712") });
+db.contactsales.find({ brand: ObjectId("660d3f7a80580269b9632712") });

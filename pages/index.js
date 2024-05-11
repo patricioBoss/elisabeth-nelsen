@@ -135,7 +135,7 @@ export const getStaticProps = async () => {
     const myArticules = await Promise.all(
       data.map((articule) => getNeededInfo(articule))
     );
-    console.log({ myArticules });
+    // console.log({ myArticules });
     return {
       props: {
         list: myArticules,

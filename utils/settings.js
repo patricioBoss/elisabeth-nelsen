@@ -55,7 +55,7 @@ export const getNeededInfo = async (article) => {
     type,
     featured_media,
   } = article;
-  console.log({ featured_media });
+  // console.log({ featured_media });
   const { data } = await axios.get(
     "https://archive.businessday.ng/wp-json/wp/v2/media/" + featured_media
   );

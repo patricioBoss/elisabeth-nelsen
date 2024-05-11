@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import clsx from "clsx";
 import "tiny-slider/dist/tiny-slider.css";
 import Image from "next/image";
+
 const reviews = [
   {
     title: "Personalized Approach",

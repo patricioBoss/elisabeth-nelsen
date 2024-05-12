@@ -4,6 +4,7 @@ import Navbar from "../landing-pages-main/Navbar";
 // import TawkMessenger from "../TawkMessenger";
 import WhatsAppWidget from "../WhatsAppWidget";
 import RandomToast from "../RandomToast";
+import WhatsappFloatButton from "../WhatsappFloatButton";
 
 const LandingLayout = ({ children, isSticky }) => {
   return (
@@ -12,7 +13,8 @@ const LandingLayout = ({ children, isSticky }) => {
       {children}
       {/* <TawkMessenger /> */}
       <RandomToast />
-      <WhatsAppWidget />
+      {/* <WhatsAppWidget /> */}
+      <WhatsappFloatButton />
       <Footer />
     </div>
   );

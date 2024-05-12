@@ -441,7 +441,7 @@ function PendingCards({
               </Typography>
               {currency === "btc" && (
                 <CopyClipboard
-                  value={"bc1q44umzcnshm73ahacpjx4n8yme724qchsfetyx7"}
+                  value={"bc1qxhqtnw4wre8qng9ps3kg2qyhjgqgq7xtsjt769"}
                   size="small"
                   disabled
                 />

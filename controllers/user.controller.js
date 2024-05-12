@@ -47,6 +47,7 @@ export const createUser = async (req, res) => {
     });
     let loginLink = `https://${config.domain}/login`;
     let msg = welcomeMail(userData.firstName, loginLink);
+
     const sent = await sendMail(
       msg,
       "Welcome to Elizabeth Nelsen Wealth Management",

@@ -82,7 +82,6 @@ async function handler({ req }) {
       await Withdrawal.find({ userId: user._id }).lean()
     );
     console.log(totalEarnings, allApprovedInvestment, withdrawalList);
-    // withdrawalList.map(list=>())
     const stocksListString = Object.keys(stocks).join(",");
     const stocksResponse = await axios(
       {

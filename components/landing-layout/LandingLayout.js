@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../landing-pages-main/Footer";
 import Navbar from "../landing-pages-main/Navbar";
 // import TawkMessenger from "../TawkMessenger";
-import WhatsAppWidget from "../WhatsAppWidget";
+// import WhatsAppWidget from "../WhatsAppWidget";
 import RandomToast from "../RandomToast";
 import WhatsappFloatButton from "../WhatsappFloatButton";
 

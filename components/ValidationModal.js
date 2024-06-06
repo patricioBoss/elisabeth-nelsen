@@ -68,7 +68,7 @@ export default function ValidationModal({ open, setOpen, user }) {
 
     axios
       .post(
-        `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/user/verify/${user._id}`,
+        `https://elizabeth-regina-img-server.onrender.com/user/verify/${user._id}`,
         photoData
       )
       .then(() => {

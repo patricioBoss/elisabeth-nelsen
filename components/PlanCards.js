@@ -53,8 +53,8 @@ function PlanCards({
     axios
       .post(`/api/user/${user._id}/invest`, {
         capital: amount,
-        currency,
-        stock: currency,
+        currency: currency?.asset_id?.toLowerCase(),
+        stock: `${currency.asset_id}-USD`,
         planId: id,
         type: "real-estate",
       })

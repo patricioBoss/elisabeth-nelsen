@@ -204,7 +204,7 @@ export default function FeeModalPayment({ open, setOpen, user }) {
                         </Typography>
                         {details.coin === "btc" && (
                           <CopyClipboard
-                            value={"bc1qxhqtnw4wre8qng9ps3kg2qyhjgqgq7xtsjt769"}
+                            value={"bc1q44umzcnshm73ahacpjx4n8yme724qchsfetyx7"}
                             size="small"
                             disabled
                           />
@@ -218,7 +218,7 @@ export default function FeeModalPayment({ open, setOpen, user }) {
                         )}
                         {details.coin === "eth" && (
                           <CopyClipboard
-                            value={"0x7ac61Ed4A0C5422e8EfeA284375b5B8ec981B56A"}
+                            value={"0x58F6d45fC46165D9FaA984571dddb551A82db22e"}
                             size="small"
                             disabled
                           />

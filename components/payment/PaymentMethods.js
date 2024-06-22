@@ -43,6 +43,20 @@ const PAYMENT_OPTIONS = [
       "https://f004.backblazeb2.com/file/pipsville-bucket/eth-sm0-svg.svg",
     ],
   },
+  {
+    value: "xrp",
+    title: "Pay with XRP",
+    icons: [
+      "https://pipsville-bucket.s3.us-west-004.backblazeb2.com/xrp-sm0-svg.svg",
+    ],
+  },
+  {
+    value: "eth",
+    title: "Pay with DodgeCoin",
+    icons: [
+      "https://pipsville-bucket.s3.us-west-004.backblazeb2.com/doge-sm0-svg.png",
+    ],
+  },
 ];
 
 const OptionStyle = styled(Paper)(({ theme }) => ({

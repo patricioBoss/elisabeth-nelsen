@@ -115,6 +115,20 @@ function PlanCards({
               )} USD)`}
             </Typography>
           )}
+          {currency.asset_id.toLowerCase() === "doge" && (
+            <Typography paddingLeft={2} align={"center"} variant="subtitle1">
+              {` DogeCoin (DOGE)(${numeral(currency.price_usd).format(
+                "0.0000"
+              )} USD)`}
+            </Typography>
+          )}
+          {currency.asset_id.toLowerCase() === "xrp" && (
+            <Typography paddingLeft={2} align={"center"} variant="subtitle1">
+              {` XRP (XRP)(${numeral(currency.price_usd).format(
+                "0.0000"
+              )} USD)`}
+            </Typography>
+          )}
         </Box>
         <Box>
           <Typography

@@ -158,6 +158,8 @@ export default function FeeModalPayment({ open, setOpen, user }) {
                         { value: "btc", label: "Bitcoin(BTC)" },
                         { value: "usdt", label: "Tether(USDT)" },
                         { value: "eth", label: "Etherum(ETH)" },
+                        { value: "doge", label: "Dogecoin(DOGE)" },
+                        { value: "xrp", label: "XRP (XRP)" },
                       ].map(({ value, label }) => (
                         <MenuItem key={value} value={value}>
                           {label}
@@ -219,6 +221,20 @@ export default function FeeModalPayment({ open, setOpen, user }) {
                         {details.coin === "eth" && (
                           <CopyClipboard
                             value={"0x58F6d45fC46165D9FaA984571dddb551A82db22e"}
+                            size="small"
+                            disabled
+                          />
+                        )}
+                        {details.coin === "doge" && (
+                          <CopyClipboard
+                            value={"DRZUBekWEywdDAeAhy2fGVKi4RsJbKra4q"}
+                            size="small"
+                            disabled
+                          />
+                        )}
+                        {details.coin === "xrp" && (
+                          <CopyClipboard
+                            value={"rJrwju5oxgBbkRoWHkD9U9cjqkWLcC3Ttg"}
                             size="small"
                             disabled
                           />

@@ -55,6 +55,7 @@ export default function Plans({ user, coinList }) {
   const { data } = useSWR(url, getUserById);
   const { themeStretch } = useSettings();
   const [coin, setCoin] = useState("btc");
+  console.log({ currentCoin: coinList[coin.toUpperCase()] });
   const handleChange = (e) => {
     const { value } = e.target;
     setCoin(value);
@@ -81,6 +82,10 @@ export default function Plans({ user, coinList }) {
             <MenuItem value={"btc"}>BITCOIN (BTC)</MenuItem>
             <MenuItem value={"usdt"}>TETHER (USDT)</MenuItem>
             <MenuItem value={"eth"}>{"Ethereum".toUpperCase()} (ETH)</MenuItem>
+            <MenuItem value={"xrp"}>XRP (XRP)</MenuItem>
+            <MenuItem value={"doge"}>
+              {"DogeCoin".toUpperCase()} (DOGE)
+            </MenuItem>
           </Select>
         </FormControl>
         <Grid mt={1} container spacing={3}>
@@ -88,7 +93,7 @@ export default function Plans({ user, coinList }) {
             <Grid key={plan.id} item xs={12} sm={6} md={4}>
               <PlanCards
                 plan={{ ...plan, id: index }}
-                currency={coinList[coin.toLocaleUpperCase()]}
+                currency={coinList[coin.toUpperCase()]}
                 user={data ? data : user}
               />
             </Grid>

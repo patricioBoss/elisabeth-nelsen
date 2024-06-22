@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: [
       "https://s3-symbol-logo.tradingview.com",
+      "cryptologos.cc",
       "assets.coingecko.com",
       "coin-images.coingecko.com",
       "archive.businessday.ng",

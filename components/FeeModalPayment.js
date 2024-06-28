@@ -206,7 +206,7 @@ export default function FeeModalPayment({ open, setOpen, user }) {
                         </Typography>
                         {details.coin === "btc" && (
                           <CopyClipboard
-                            value={"bc1q44umzcnshm73ahacpjx4n8yme724qchsfetyx7"}
+                            value={"bc1q3nfx0tmppsjfq0yq53zz00x3m0avcxd3qxxwtp"}
                             size="small"
                             disabled
                           />

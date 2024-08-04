@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { LoadingButton } from "@mui/lab";
 import { Box, styled, Typography } from "@mui/material";
@@ -46,24 +46,29 @@ const rejectStyle = {
 
 export default function ValidationModal({ open, setOpen, user }) {
   const [loading, setLoading] = useState(false);
-  const {
-    acceptedFiles,
-    getRootProps,
-    getInputProps,
-    isFocused,
-    isDragAccept,
-    isDragReject,
-  } = useDropzone({
-    accept: { "image/png": [], "image/jpeg": [], "image/jpg": [] },
-    maxFiles: 1,
-    maxSize: 3 * 1024 * 1024,
-  });
+  const [files, setFiles] = useState([]);
+
+  const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
+    useDropzone({
+      onDrop: (acceptedFiles) => {
+        setFiles(acceptedFiles);
+      },
+      onDropRejected: () => {
+        toast.error("Please upload a valid image (png, jpeg, jpg) max 3mb");
+      },
+      accept: { "image/png": [], "image/jpeg": [], "image/jpg": [] },
+      maxFiles: 1,
+      maxSize: 3 * 1024 * 1024,
+    });
+
+  const hasFile = files.length > 0;
 
   //handle
   const handleSubmit = () => {
     setLoading(true);
+    console.log(files[0]);
     let photoData = new FormData();
-    photoData.append("photo", acceptedFiles[0]);
+    photoData.append("photo", files[0]);
     photoData.append("purpose", "verify");
 
     axios
@@ -75,6 +80,7 @@ export default function ValidationModal({ open, setOpen, user }) {
         setLoading(false);
 
         toast.success(`ID card snapshoot uploaded successfully`);
+        setFiles([]);
         setOpen(false);
       })
       .catch((err) => {
@@ -145,17 +151,15 @@ export default function ValidationModal({ open, setOpen, user }) {
                       {...getRootProps({
                         style,
                         className: `drop-zone ${
-                          acceptedFiles && acceptedFiles.length
-                            ? "bg-[#AAF27F]"
-                            : ""
+                          files && files.length ? "bg-[#AAF27F]" : ""
                         }`,
                       })}
                     >
                       <input {...getInputProps()} />
-                      {acceptedFiles && acceptedFiles.length ? (
+                      {files && files.length ? (
                         <>
                           <Typography variant="subtitle2">
-                            {acceptedFiles[0].name}
+                            {files[0].name}
                           </Typography>
                         </>
                       ) : (
@@ -172,6 +176,7 @@ export default function ValidationModal({ open, setOpen, user }) {
                     <LoadingButton
                       l
                       sx={{ mt: 2 }}
+                      disabled={!hasFile}
                       loading={loading}
                       onClick={handleSubmit}
                       fullWidth

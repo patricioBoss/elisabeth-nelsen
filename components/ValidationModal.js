@@ -5,7 +5,7 @@ import { Box, styled, Typography } from "@mui/material";
 import axios from "axios";
 import { useDropzone } from "react-dropzone";
 import { toast } from "react-toastify";
-
+//changes
 const Img = styled("img")(({ theme }) => ({
   width: "350px",
   [theme.breakpoints.down("sm")]: {

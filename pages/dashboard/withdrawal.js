@@ -14,6 +14,7 @@ import useSWR from "swr";
 import serializeFields from "../../helpers/serialize";
 import { fCurrency } from "../../utils/formatNumber";
 import WithdrawalTable from "../../components/WithdrawalTable";
+import { differenceInDays } from "date-fns";
 // ----------------------------------------------------------------------
 async function handler({ req }) {
   const user = serializeFields(req.user);
@@ -49,17 +50,33 @@ export default function Withdrawal({ user, withdrawalList }) {
   const url = `/api/user/${user._id}`;
   const { data } = useSWR(url, getUserById);
   const { themeStretch } = useSettings();
+  const getDateDiff = () =>
+    differenceInDays(new Date(user?.withdrawalVested), new Date());
+
   return (
     <Page title="wallet">
       <Container maxWidth={themeStretch ? false : "xl"}>
         <Typography variant="h4">Withdrawal/Pay wall</Typography>
-        <Typography variant="body2" mb={3}>
-          You currently have a withdrawable balance of{" "}
-          <Typography component={"span"} sx={{ fontWeight: 700 }}>
-            {fCurrency(user.accountBalance)}
+        {user?.withdrawalVested &&
+        new Date(user?.withdrawalVested) > new Date() ? (
+          <Typography variant="body2" mb={3}>
+            Dear {user?.firstName}, your investment on our platform is now
+            vested. You will be eligible to make a withdrawal in
+            <Typography component={"span"} sx={{ fontWeight: 700 }}>
+              {getDateDiff()} days
+            </Typography>
+            . Please feel free to monitor your panel for further updates. Note,
+            you cannot withdraw more than your account balance.
           </Typography>
-          . Note, you cannot withdraw more than your account balance.
-        </Typography>
+        ) : (
+          <Typography variant="body2" mb={3}>
+            You currently have a withdrawable balance of{" "}
+            <Typography component={"span"} sx={{ fontWeight: 700 }}>
+              {fCurrency(user.accountBalance)}
+            </Typography>
+            . Note, you cannot withdraw more than your account balance.
+          </Typography>
+        )}
         <Typography variant="body2" mb={1}>
           Last Updated:
         </Typography>

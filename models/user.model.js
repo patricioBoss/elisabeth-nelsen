@@ -97,6 +97,9 @@ const UserSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
+    withdrawalVested: {
+      type: Date,
+    },
   },
   {
     timestamps: true,

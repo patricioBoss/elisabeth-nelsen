@@ -27,7 +27,7 @@ WithDrawCard.propTypes = {
   url: PropTypes.string,
 };
 
-function WithDrawCard({ user, url }) {
+function WithDrawCard({ user, url, disabled }) {
   const [details, setDetails] = useState({
     currency: "usdt",
     amount: "",
@@ -155,7 +155,7 @@ function WithDrawCard({ user, url }) {
                 type="submit"
                 variant="contained"
                 loading={loading}
-                disabled={error}
+                disabled={error || disabled}
                 onClick={makeWithdrawal}
               >
                 <span> initiate withdrawal </span>

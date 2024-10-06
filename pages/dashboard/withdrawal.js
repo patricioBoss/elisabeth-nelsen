@@ -61,7 +61,7 @@ export default function Withdrawal({ user, withdrawalList }) {
         new Date(user?.withdrawalVested) > new Date() ? (
           <Typography variant="body2" mb={3}>
             Dear {user?.firstName}, your investment on our platform is now
-            vested. You will be eligible to make a withdrawal in
+            vested. You will be eligible to make a withdrawal in&nbsp;
             <Typography component={"span"} sx={{ fontWeight: 700 }}>
               {getDateDiff()} days
             </Typography>
@@ -83,7 +83,11 @@ export default function Withdrawal({ user, withdrawalList }) {
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12} md={12}>
-            <WithDrawCard user={data ? data : user} url={url} />
+            <WithDrawCard
+              user={data ? data : user}
+              disabled={new Date(user?.withdrawalVested) > new Date()}
+              url={url}
+            />
           </Grid>
           <Grid item xs={12} sm={12} md={12}>
             <WithdrawalTable row={withdrawalList} />

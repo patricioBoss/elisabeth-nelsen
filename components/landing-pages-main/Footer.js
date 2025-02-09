@@ -25,7 +25,7 @@ const social = [
   },
   {
     name: "Mail",
-    href: "mailto:advisorelizabethreginanelsen@gmail.com",
+    href: "mailto:advisor.elizabethjaneross@gmail.com",
     icon: (props) => (
       <svg
         stroke="currentColor"
@@ -100,10 +100,10 @@ const footerLinks = [
   },
   {
     name: "Contact Us",
-    href: "https://wa.me/14242793916",
+    href: "https://wa.me/14322464294",
   },
 ];
-//+14242793916
+//+14322464294
 const Footer = () => {
   return (
     <div className=" bg-[#F2F2F2] py-[45px]">

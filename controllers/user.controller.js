@@ -50,7 +50,7 @@ export const createUser = async (req, res) => {
 
     const sent = await sendMail(
       msg,
-      "Welcome to Elizabeth Nelsen Wealth Management",
+      "Welcome to Elizabeth Ross Wealth Management",
       userData.email
     );
     console.log(sent);

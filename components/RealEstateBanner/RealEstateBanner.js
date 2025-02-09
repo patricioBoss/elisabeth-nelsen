@@ -7,22 +7,22 @@ const reels = [
   {
     imgUrl: "/img/real/banner/1.png",
     title:
-      "Achieve Your Financial Goals with Elizabeth Nelsen's Wealth Management Services",
+      "Achieve Your Financial Goals with Elizabeth Ross's Wealth Management Services",
     paragraph:
-      "Elizabeth Nelsen offers a wide range of carefully tailored wealth management services that allow you to diversify and maximize your returns. With her expertise, investing in your financial future has never been easier.",
+      "Elizabeth Ross offers a wide range of carefully tailored wealth management services that allow you to diversify and maximize your returns. With her expertise, investing in your financial future has never been easier.",
   },
   {
     imgUrl: "/img/real/banner/2.png",
     title:
-      "Unlock Your Wealth with Elizabeth Nelsen's Wealth Management Strategies",
+      "Unlock Your Wealth with Elizabeth Ross's Wealth Management Strategies",
     paragraph:
-      "Wealth management is a proven way to build long-term financial security and achieve your goals. Elizabeth Nelsen offers access to personalized investment strategies and a comprehensive range of services to help you unlock your wealth potential.",
+      "Wealth management is a proven way to build long-term financial security and achieve your goals. Elizabeth Ross offers access to personalized investment strategies and a comprehensive range of services to help you unlock your wealth potential.",
   },
   {
     title:
-      "Unlock Your Wealth with Elizabeth Nelsen's Expert Wealth Management Services",
+      "Unlock Your Wealth with Elizabeth Ross's Expert Wealth Management Services",
     paragraph:
-      "Experience high returns and hassle-free financial planning with Elizabeth Nelsen's diverse range of wealth management solutions. Join now and take control of your financial future!",
+      "Experience high returns and hassle-free financial planning with Elizabeth Ross's diverse range of wealth management solutions. Join now and take control of your financial future!",
 
     imgUrl: "/img/real/banner/3.png",
   },

@@ -4,10 +4,10 @@ const sampleMailTemplate = (name = "", loginLink, message) => `
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8" />
-        <title>Message From Elizabeth Nelsen Wealth Management</title>
+        <title>Message From Elizabeth Ross Wealth Management</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta content="Elizabeth Nelsen Wealth Management" name="description" />
-        <meta name="author" content="Message, Elizabeth Nelsen Wealth Management" />
+        <meta content="Elizabeth Ross Wealth Management" name="description" />
+        <meta name="author" content="Message, Elizabeth Ross Wealth Management" />
         <meta name="version" content="1.0.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -22,7 +22,7 @@ const sampleMailTemplate = (name = "", loginLink, message) => `
             <table cellpadding="0" cellspacing="0" style="font-family: Nunito, sans-serif; font-size: 15px; font-weight: 400; width: 600px; border: none; margin: 0 auto; overflow: hidden; background-color: #fff; box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);">
                 <thead>
                     <tr style="background-color: #14609a; padding: 3px 0; border: none; line-height: 68px; text-align: center; color: #fff; font-size: 24px; letter-spacing: 1px;">
-                        <th scope="col"><img style="width: 300px; margin-top: 50px;" src="https://pipsville-bucket.s3.us-west-004.backblazeb2.com/nelsen-logo.png" alt=""></th>
+                        <th scope="col"><img style="width: 300px; margin-top: 50px;" src="https://res.cloudinary.com/dkmwt49xd/image/upload/v1739003668/personal/jrzfleupkkctmvvwqt3d.svg" alt=""></th>
                     </tr>
                 </thead>
     
@@ -45,13 +45,13 @@ const sampleMailTemplate = (name = "", loginLink, message) => `
                     </tr>
                     <tr>
                         <td style="padding: 15px 24px 15px; color: #676d74;">
-                            Elizabeth Nelsen Wealth Management <br> Support Team
+                            Elizabeth Ross Wealth Management <br> Support Team
                         </td>
                     </tr>
     
                     <tr>
                         <td style="padding: 16px 8px; color: #676d74; background-color: #f8f9fc; text-align: center;">
-                            © <script>document.write(new Date().getFullYear())</script> Elizabeth Nelsen Wealth Management.
+                            © <script>document.write(new Date().getFullYear())</script> Elizabeth Ross Wealth Management.
                         </td>
                     </tr>
                 </tbody>

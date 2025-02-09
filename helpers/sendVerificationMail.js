@@ -45,7 +45,7 @@ const sendMail = async (msg, subject, reciever) => {
   //2. You can configure the object however you want
   try {
     let mail = {
-      from: `"Elizabeth Nelsen" <${config.email}>`,
+      from: `"Elizabeth Ross" <${config.email}>`,
       to: reciever,
       subject: subject,
       html: msg,

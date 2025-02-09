@@ -9,7 +9,7 @@ const AboutSection = () => {
         src={"/img/666x1122.jpg"}
         width={390}
         height={663.09}
-        alt="Elizabeth Regina Nelsen"
+        alt="Elizabeth Jane Ross"
         priority
       />
       <div className=" bg-white flex-1 p-3 md:p-[30px] flex mt-7 md:mt-0 flex-col">

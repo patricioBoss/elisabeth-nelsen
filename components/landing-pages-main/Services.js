@@ -108,7 +108,7 @@ const MyStory = () => {
             {more && <br />}
             {more && (
               <span>
-                <span className=" font-semibold">Elizabeth Regina Nelsen:</span>
+                <span className=" font-semibold">Elizabeth Jane Ross:</span>
                 &quot;As a seasoned business professional with expertise in
                 business development, performance management, and book
                 management, I leverage my skills to drive growth and retention
@@ -178,7 +178,7 @@ const serviceTeam = (
     </h6>
     <div>
       <p className=" text-base">
-        <span className=" font-semibold">Phone:</span> +1(424)279-3916
+        <span className=" font-semibold">Phone:</span> +1(432)246-4294
       </p>
       <p className=" text-base">
         <span className=" font-semibold">Email:</span>
@@ -198,7 +198,7 @@ const MyLocation = (
           <br />
           Suite 501, Jersey City, NJ 07311
           <br />
-          Direct: +1(424)279-3916
+          Direct: +1(432)246-4294
         </p>
       </div>
       <div className=" md:flex-1">

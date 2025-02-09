@@ -13,11 +13,11 @@ const CTAsection = () => {
       <div className=" container">
         <div className=" container md:flex md:justify-between py-[30px] border-y border-y-[#CCCCCC] ">
           <p className=" text-[19px] mb-6">
-            Ready to start a conversation? Contact Elizabeth Nelsen today.
+            Ready to start a conversation? Contact Elizabeth Ross today.
           </p>
           <div>
             <a
-              href="https://wa.me/+14242793916"
+              href="https://wa.me/+14322464294"
               target="_blank"
               rel="noreferrer"
               className=" mx-auto md:mx-0 py-[16px] px-[52px] rounded-full text-[19px] font-bold text-white bg-[#3182C1] m-auto cursor-pointer"

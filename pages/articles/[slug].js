@@ -121,7 +121,7 @@ const BlogPage = ({ article, url }) => {
         openGraph={{
           title: article.title,
           description: article.excerpt,
-          url: `https://advisor.elizabethreginanelsen.com/articles/${article.slug}`,
+          url: `https://advisor.elizabethjaneross.com/articles/${article.slug}`,
           type: "article",
           article: {
             publishedTime: "2017-06-21T23:04:13Z",

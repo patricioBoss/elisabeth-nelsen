@@ -11,7 +11,7 @@ const Page = forwardRef(
   ({ children, title = "", meta, fallback, ...other }, ref) => (
     <>
       <Head>
-        <title>{`${title} | Elizabeth Regina Nelsen | Financial Advisor | Family Wealth Advisor`}</title>
+        <title>{`${title} | Elizabeth Jane Ross | Financial Advisor | Family Wealth Advisor`}</title>
         {meta}
       </Head>
       <SWRConfig value={{ fallback }}>

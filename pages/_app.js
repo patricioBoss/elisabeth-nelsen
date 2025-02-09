@@ -58,22 +58,22 @@ export default function MyApp(props) {
   return (
     <>
       <DefaultSeo
-        title="Elizabeth Regina Nelsen | Financial Advisor | Family Wealth Advisor"
-        description="Elizabeth Regina Nelsen: Expert guidance for secure financial futures.Business professional with expertise in business development, performance management, and book management. Specializing in Retirement, Investing, Family Wealth, Business Planning, Philanthropy, and Financial Wellness."
+        title="Elizabeth Jane Ross | Financial Advisor | Family Wealth Advisor"
+        description="Elizabeth Jane Ross: Expert guidance for secure financial futures.Business professional with expertise in business development, performance management, and book management. Specializing in Retirement, Investing, Family Wealth, Business Planning, Philanthropy, and Financial Wellness."
         openGraph={{
           type: "website",
           locale: "en-GB",
-          url: "https://advisor.elizabethreginanelsen.com",
-          siteName: "Elizabeth Regina Nelsen Portfolio website",
+          url: "https://advisor.elizabethjaneross.com",
+          siteName: "Elizabeth Jane Ross Portfolio website",
           profile: {
-            firstName: "Elizabeth Regina Nelsen",
+            firstName: "Elizabeth Jane Ross",
             lastName: "Crowe",
             gender: "female",
           },
           images: [
             {
               url: "/img/666x1122.jpg",
-              alt: "https://advisor.elizabethreginanelsen.com - site",
+              alt: "https://advisor.elizabethjaneross.com - site",
             },
           ],
         }}
@@ -81,7 +81,7 @@ export default function MyApp(props) {
           {
             name: "keywords",
             content:
-              "Elizabeth Regina Nelsen, Elizabeth, Regina, Nelsen, Elizabeth Nelsen, Elizabeth Regina Nelsen, Senior Analyst,  Business Planning, elizabethreginanelsen, Wealth Management, Wealth Management, Financial goals, Retirement, Investing, Family planning, Business planning, Philanthropy, Financial wellness",
+              "Elizabeth Jane Ross, Elizabeth, Regina, Nelsen, Elizabeth Ross, Elizabeth Jane Ross, Senior Analyst,  Business Planning, elizabethreginanelsen, Wealth Management, Wealth Management, Financial goals, Retirement, Investing, Family planning, Business planning, Philanthropy, Financial wellness",
           },
           // {
           //   name: "google-site-verification",
@@ -97,11 +97,11 @@ export default function MyApp(props) {
       />
       <LocalBusinessJsonLd
         type="Family Wealth Advisor"
-        id="https://advisor.elizabethreginanelsen.com"
-        name="Elizabeth Regina Nelsen - Financial Advisor - Family Wealth Advisor"
-        description="Elizabeth Regina Nelsen can help you achieve your financial goals. Learn about Retirement, Investing, Family, Business Planning, Philanthropy, and Financial Wellness."
+        id="https://advisor.elizabethjaneross.com"
+        name="Elizabeth Jane Ross - Financial Advisor - Family Wealth Advisor"
+        description="Elizabeth Jane Ross can help you achieve your financial goals. Learn about Retirement, Investing, Family, Business Planning, Philanthropy, and Financial Wellness."
         url=""
-        telephone="+14242793916"
+        telephone="+14322464294"
         address={{
           streetAddress:
             " Harborside 2 200 Hudson Street, Suite 501, Jersey City, NJ 07311",

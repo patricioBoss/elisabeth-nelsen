@@ -41,6 +41,7 @@ import ThemeColorPresets from "../components/ThemeColorPresets";
 import MotionLazyContainer from "../components/animate/MotionLazyContainer";
 import Script from "next/script";
 import { DefaultSeo, LocalBusinessJsonLd } from "next-seo";
+import TawkMessenger from "../components/TawkMessenger";
 
 // ----------------------------------------------------------------------
 //advisor.ElizabethReginaNelsen
@@ -159,6 +160,7 @@ export default function MyApp(props) {
           </ThemeProvider>
         </SettingsProvider>
       </CollapseDrawerProvider>
+      <TawkMessenger />
       <Script>{`feather.replace();`}</Script>
       {/* <Script
         src="//code.tidio.co/ryxghgdiucqlkgswdprdkwlolpygakwf.js"

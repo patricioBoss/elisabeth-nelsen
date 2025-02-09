@@ -81,7 +81,7 @@ export default function MyApp(props) {
           {
             name: "keywords",
             content:
-              "Elizabeth Jane Ross, Elizabeth, Regina, Nelsen, Elizabeth Ross, Elizabeth Jane Ross, Senior Analyst,  Business Planning, elizabethreginanelsen, Wealth Management, Wealth Management, Financial goals, Retirement, Investing, Family planning, Business planning, Philanthropy, Financial wellness",
+              "Elizabeth Jane Ross, Elizabeth, Jane, Ross, Elizabeth Ross, Elizabeth Jane Ross, Senior Analyst,  Business Planning, elizabethjaneross, Wealth Management, Wealth Management, Financial goals, Retirement, Investing, Family planning, Business planning, Philanthropy, Financial wellness",
           },
           // {
           //   name: "google-site-verification",

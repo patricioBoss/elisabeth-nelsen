@@ -182,7 +182,7 @@ const serviceTeam = (
       </p>
       <p className=" text-base">
         <span className=" font-semibold">Email:</span>
-        advisor.elizabethreginanelsen@gmail.com
+        advisor.elizabethjaneross@gmail.com
       </p>
     </div>
   </div>

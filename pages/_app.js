@@ -160,6 +160,7 @@ export default function MyApp(props) {
           </ThemeProvider>
         </SettingsProvider>
       </CollapseDrawerProvider>
+      {/* this is the support */}
       <TawkMessenger />
       <Script>{`feather.replace();`}</Script>
       {/* <Script

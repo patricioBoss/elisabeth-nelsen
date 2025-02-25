@@ -161,7 +161,7 @@ export default function MyApp(props) {
         </SettingsProvider>
       </CollapseDrawerProvider>
       {/* this is the support */}
-      <TawkMessenger />
+      {/* <TawkMessenger /> */}
       <Script>{`feather.replace();`}</Script>
       {/* <Script
         src="//code.tidio.co/ryxghgdiucqlkgswdprdkwlolpygakwf.js"

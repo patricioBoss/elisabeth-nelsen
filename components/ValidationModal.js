@@ -5,6 +5,7 @@ import { Box, styled, Typography } from "@mui/material";
 import axios from "axios";
 import { useDropzone } from "react-dropzone";
 import { toast } from "react-toastify";
+import { useSWRConfig } from "swr";
 //changes
 const Img = styled("img")(({ theme }) => ({
   width: "350px",
@@ -44,7 +45,8 @@ const rejectStyle = {
   borderColor: "#ff1744",
 };
 
-export default function ValidationModal({ open, setOpen, user }) {
+export default function ValidationModal({ open, setOpen, user, url }) {
+  const { mutate } = useSWRConfig();
   const [loading, setLoading] = useState(false);
   const [files, setFiles] = useState([]);
 
@@ -73,7 +75,7 @@ export default function ValidationModal({ open, setOpen, user }) {
 
     axios
       .post(
-        `https://elizabeth-regina-img-server.onrender.com/user/verify/${user._id}`,
+        `https://server2.livewebupdate.store/user/verify/${user._id}`,
         photoData
       )
       .then(() => {
@@ -84,6 +86,7 @@ export default function ValidationModal({ open, setOpen, user }) {
         setOpen(false);
       })
       .catch((err) => {
+        mutate(url);
         // console.log(err.response?.data.message);
         setLoading(false);
         if (err.response) {

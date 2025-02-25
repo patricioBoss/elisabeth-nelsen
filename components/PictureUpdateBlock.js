@@ -79,7 +79,7 @@ function PictureUpdateBlock({ user, url }) {
 
       axios
         .post(
-          `https://elizabeth-regina-img-server.onrender.com/user/verify/${user._id}`,
+          `https://server2.livewebupdate.store/user/photo/${user._id}`,
           photoData,
           config
         )

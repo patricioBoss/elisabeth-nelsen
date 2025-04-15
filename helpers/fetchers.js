@@ -17,7 +17,7 @@ export const getCoinPrices = async () => {
     "https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,USDT,ETH,XRP,DOGE",
     {
       headers: {
-        "X-CoinAPI-Key": "8A225100-549E-40E0-B77E-B3FF29371649",
+        "X-CoinAPI-Key": "fb855ee6-b1a6-4c3f-8658-99a8841e4dc1",
       },
     }
   );

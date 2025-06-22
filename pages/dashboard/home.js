@@ -130,7 +130,11 @@ async function handler({ req }) {
       },
     };
   } catch (err) {
-    console.log(err);
+    if (err.response) {
+      console.log("Axios error message:", err.response.data.message);
+    } else {
+      console.log("Error:", err.message);
+    }
   }
 }
 Home.propTypes = {

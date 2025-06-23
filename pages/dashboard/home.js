@@ -27,6 +27,8 @@ import { LoadingButton } from "@mui/lab";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import RealEstateBanner from "../../components/RealEstateBanner/RealEstateBanner";
+import fs from "fs/promises";
+import path from "path";
 
 // ----------------------------------------------------------------------
 const style = {
@@ -96,18 +98,34 @@ async function handler({ req }) {
     );
 
     const stocksDataArray = await stocksResponse.data.data;
-
+    /**
     const stockListArray = Object.keys(stocks).map((symbol) =>
       axios.get(
         `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?metrics=high&interval=30m&range=1d`
       )
     );
-    const stockQuoteList = await Promise.all(stockListArray);
 
+    const stockQuoteList = await Promise.all(stockListArray);
+    const jsonData = {
+      list: stockQuoteList.map((stock) => {
+        return {
+          data: stock.data.chart,
+        };
+      }),
+    };
+
+ */
+    const filePath = path.join(process.cwd(), "public", "dashboardData.json");
+
+    // fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), "utf-8");
+    // console.log(`Data written to ${filePath}`);
+    // console.log("this is stockQuoteList", stockQuoteList);
+    const jsonFile = await fs.readFile(filePath, "utf-8");
+    const parsedData = JSON.parse(jsonFile);
     let stocksDataList = stocksDataArray.map((stock, idx) => {
       return {
         ...stock,
-        ...stockQuoteList[idx].data.chart.result[0].meta,
+        ...parsedData.list[idx].data.result[0].meta,
       };
     });
     return {

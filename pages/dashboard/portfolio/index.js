@@ -14,6 +14,8 @@ import pageAuth from "../../../middleware/pageAuthAccess";
 import stocks from "../../../helpers/stocks";
 import axios from "axios";
 import StocksCard from "../../../components/stocksCard";
+import fs from "fs/promises";
+import path from "path";
 // ----------------------------------------------------------------------
 async function handler({ req }) {
   const user = serializeFields(req.user);
@@ -29,21 +31,23 @@ async function handler({ req }) {
   });
   const stocksDataList = await stocksResponse.data.data;
 
-  const stockListArray = Object.keys(stocks).map((symbol) =>
-    axios.get(
-      `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?metrics=high&interval=30m&range=1d`
-    )
-  );
-  const stockQuoteList = await Promise.all(stockListArray);
+  // const stockListArray = Object.keys(stocks).map((symbol) =>
+  //   axios.get(
+  //     `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?metrics=high&interval=30m&range=1d`
+  //   )
+  // );
+  // const stockQuoteList = await Promise.all(stockListArray);
+  const filePath = path.join(process.cwd(), "public", "dashboardData.json");
 
+  // fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), "utf-8");
+  // console.log(`Data written to ${filePath}`);
+  // console.log("this is stockQuoteList", stockQuoteList);
+  const jsonFile = await fs.readFile(filePath, "utf-8");
+  const parsedData = JSON.parse(jsonFile);
   let stockDataQuote = stocksDataList.map((stock, idx) => {
-    console.log(
-      stock.symbol,
-      JSON.stringify(stockQuoteList[idx].data, null, 2)
-    );
     return {
-      data: { ...stock, ...stockQuoteList[idx].data.chart.result[0].meta },
-      quote: stockQuoteList[idx].data.chart.result[0].indicators.quote[0],
+      data: { ...stock, ...parsedData.list[idx].data.result[0].meta },
+      quote: parsedData.list[idx].data.result[0].indicators.quote[0],
     };
   });
 

@@ -18,7 +18,8 @@ import PlanCards from "../../../../components/PlanCards";
 import plans from "../../../../helpers/plans";
 import StockPlanCards from "../../../../components/StockPlanCards";
 import PaymentChoice from "../../../../components/PaymentChoice";
-
+import fs from "fs/promises";
+import path from "path";
 // ----------------------------------------------------------------------
 async function handler(context) {
   const user = serializeFields(context.req.user);
@@ -42,15 +43,21 @@ async function handler(context) {
     }
     // `https://query1.finance.yahoo.com/v6/finance/quote?symbols=${stocksListString}`
   );
-  const quoteResponse = await axios.get(
-    `https://query1.finance.yahoo.com/v8/finance/chart/${stockSymbol}?metrics=high&interval=30m&range=5d`
-  );
+  // const quoteResponse = await axios.get(
+  //   `https://query1.finance.yahoo.com/v8/finance/chart/${stockSymbol}?metrics=high&interval=30m&range=5d`
+  // );
+  const filePath = path.join(process.cwd(), "public", "dashboardData.json");
 
+  const jsonFile = await fs.readFile(filePath, "utf-8");
+  const parsedData = JSON.parse(jsonFile);
+  let stockParsedData = parsedData.list.find(
+    (item) => item.data.result[0].meta.symbol === stockSymbol
+  );
   // const stockData = await stockResponse.data.quoteResponse.result[0];
   const stockData = await stockResponse.data.data[0];
   const quoteData = {
-    timestamp: await quoteResponse.data.chart.result[0].timestamp,
-    quotes: await quoteResponse.data.chart.result[0].indicators.quote[0],
+    timestamp: stockParsedData.data.result[0].timestamp,
+    quotes: stockParsedData.data.result[0].indicators.quote[0],
   };
 
   // console.log(stocksDataList.length, stockQuoteList.length, stockDataQuote);
@@ -93,7 +100,7 @@ export default function Plans({ user, stockData, quoteData }) {
     setOpen(true);
   };
 
-  console.log({ stockData, quoteData });
+  // console.log({ stockData, quoteData });
   const { data } = useSWR(url, getUserById);
   const { themeStretch } = useSettings();
 

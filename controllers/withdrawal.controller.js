@@ -27,14 +27,26 @@ export const makeWithdrawal = async (req, res) => {
     )
   ) {
     return response(res, 401, "Activate your silver level plan", null);
+  } else if (
+    !["jandrisan30@gmail.com", "mbataprecious9@yahoo.com"].includes(
+      req.profile.email?.toLowerCase()
+    )
+  ) {
+    return response(res, 401, "Upgrade your account to sliver level", null);
   }
-  return response(res, 401, "Upgrade your account to sliver level", null);
-  /**
-  
+
   try {
-    // if (parseInt(amount) < 600) {
-    //   return response(res, 400, "cannot withdrawl less than 600", null);
-    // }
+    if (parseInt(amount) > Number(currentBalance)) {
+      return response(
+        res,
+        400,
+        "cannot withdraw more than account balance",
+        null
+      );
+    }
+    if (parseInt(amount) > 300000) {
+      return response(res, 400, "cannot withdraw more than $300 at once", null);
+    }
     if (!Object.values(req.profile.wallets).some((x) => x)) {
       return response(res, 404, "wallet not found", null);
     }
@@ -76,8 +88,6 @@ export const makeWithdrawal = async (req, res) => {
   } catch (err) {
     return response(res, 500, "server error", err.message);
   }
-
-   */
 };
 
 export const approveWithdrawal = async (req, res) => {

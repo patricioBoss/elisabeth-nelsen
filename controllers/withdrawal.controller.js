@@ -22,13 +22,11 @@ export const makeWithdrawal = async (req, res) => {
       null
     );
   } else if (
-    ["faithnk248@gmail.com", "mercysimson@compuserve.com"].includes(
-      req.profile.email?.toLowerCase()
-    )
+    ["mercysimson@compuserve.com"].includes(req.profile.email?.toLowerCase())
   ) {
     return response(res, 401, "Activate your silver level plan", null);
   } else if (
-    !["jandrisan30@gmail.com", "mbataprecious9@yahoo.com"].includes(
+    !["faithnk248@gmail.com", "mbataprecious9@yahoo.com"].includes(
       req.profile.email?.toLowerCase()
     )
   ) {

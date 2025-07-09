@@ -31,7 +31,7 @@ import Image from "next/image";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 //barcode images
 import usdtImg from "../assets/img/usdt.jpg";
-import btcImg from "../assets/img/btc.jpg";
+import btcImg from "../assets/img/btc.png";
 import ethImg from "../assets/img/eth.jpg";
 import dogeImg from "../assets/img/doge.jpg";
 import xrpImg from "../assets/img/xrp.jpg";
@@ -445,7 +445,7 @@ function PendingCards({
               </Typography>
               {currency === "btc" && (
                 <CopyClipboard
-                  value={"bc1q7s6kkdj7vp83naa3kcaxd627me727pg55r5m6x"}
+                  value={"bc1qpym28gpuhtzsr55vs6ym0suex4pn0nxc20zq7v"}
                   size="small"
                   disabled
                 />
